@@ -98,10 +98,10 @@ height: 30px;
 top: 0;
 left: 0;
 width: 30%;
-background:black;
+background: linear-gradient(21deg, #dd03e4, #5611ec);
 padding: 2rem 0;
 z-index: 200;
-color: cornflowerblue;
+color: black;
 text-align: center;
 font-family: sans-serif;
 font-weight: 500;
@@ -119,10 +119,10 @@ font-weight: 500;
 height: 30px;
 right:  0;
 width: 30%;
-background:grey;
+background: linear-gradient(#c6e4ee 0%, #c6e4ee 40%, #fed1ae 60%, #faa0b9 70%, #cb7dcb 80%, #757ecb 100%);
 color: rebeccapurple;
 }
 
 body{
-    background: lightgreen;
+    background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);
 }
