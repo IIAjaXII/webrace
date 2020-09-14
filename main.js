@@ -40,6 +40,8 @@ function getQuantityElements(heightElement){
 
 function startGame(){
     start.classList.add('hide');
+    left.classList.remove('hide');
+    right.classList.remove('hide');
     gameArea.innerHTML = '';
     
 
@@ -170,6 +172,8 @@ function moveEnemy(){
             carRect.bottom >= enemyRect.top){
             setting.start = false;
             start.classList.remove('hide');
+            left.classList.add('hide');
+            right.classList.add('hide');
             start.style.top = start.offsetHeight;
         }
 

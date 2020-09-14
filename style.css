@@ -130,15 +130,18 @@ body{
     position: absolute;
     left:10;
     bottom: 30%;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background: #cb7dcb;
+    border-radius: 50%;
+    
 }
 .right{
     position: absolute;
     right: 10;
     bottom: 30%;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background: #cb7dcb;
+    border-radius: 50%;
 }
