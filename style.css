@@ -126,3 +126,19 @@ color: rebeccapurple;
 body{
     background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);
 }
+.left{
+    position: absolute;
+    left:10;
+    bottom: 10;
+    width: 100px;
+    height: 100px;
+    background: #cb7dcb;
+}
+.right{
+    position: absolute;
+    right: 10;
+    bottom: 10;
+    width: 100px;
+    height: 100px;
+    background: #cb7dcb;
+}
