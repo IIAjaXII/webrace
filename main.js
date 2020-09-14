@@ -2,7 +2,14 @@ const score = document.querySelector('.score'),
 start = document.querySelector('.start'),
 gameArea = document.querySelector('.gameArea'),
 car = document.createElement('div'),
-hiscore = document.querySelector('.hiscore');
+hiscore = document.querySelector('.hiscore'),
+left = document.querySelector('.left'),
+right = document.querySelector('.right');
+
+
+
+
+
 
 car.classList.add('car');
 
@@ -21,7 +28,9 @@ const setting = {
     score: 0,
     speed: 3,
     traffic: 3,
-    hiscore: 0
+    hiscore: 0,
+    touchleft:0,
+    touchright:0
 }
 function getQuantityElements(heightElement){
     return document.documentElement.clientHeight / heightElement +1;
@@ -79,10 +88,10 @@ function playGame(){
         hiscore.innerHTML = 'Лучший заезд<br> ' + setting.hiscore;
         moveRoad();
         moveEnemy();
-        if(keys.ArrowLeft && setting.x>0 ){
+        if(keys.ArrowLeft && setting.x>0 || setting.touchleft && setting.x>0 ){
             setting.x -= 10;
         }
-        if(keys.ArrowRight && setting.x<(gameArea.offsetWidth-50) ){
+        if(keys.ArrowRight && setting.x<(gameArea.offsetWidth-50) || setting.touchright && setting.x<(gameArea.offsetWidth-50) ){
             setting.x += 10;
         }
         if(keys.ArrowDown && setting.y<(gameArea.offsetHeight-car.offsetHeight)){
@@ -100,6 +109,23 @@ function playGame(){
     }
     
 }
+
+
+
+left.addEventListener('touchstart',()=>{
+    setting.touchleft = 1;
+    });
+left.addEventListener('touchend',()=>{
+    setting.touchleft = 0;
+   })
+
+right.addEventListener('touchstart',()=>{
+    setting.touchright = 1;
+    });
+right.addEventListener('touchend',()=>{
+    setting.touchright = 0;
+   })
+
 
 function startRun(event){
     
