@@ -69,6 +69,10 @@ function playGame(){
         if(setting.score >= setting.hiscore ){
             setting.hiscore = setting.score;
         }
+        if(setting.score>3000){
+            setting.speed = Math.floor(setting.score/1000);
+        }
+        
         setting.score += setting.speed;
         score.innerHTML = 'Текущий заезд<br> ' +setting.score;
         hiscore.innerHTML = 'Лучший заезд<br> ' + setting.hiscore;
