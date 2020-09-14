@@ -1,7 +1,9 @@
 const score = document.querySelector('.score'),
 start = document.querySelector('.start'),
 gameArea = document.querySelector('.gameArea'),
-car = document.createElement('div');
+car = document.createElement('div'),
+hiscore = document.querySelector('.hiscore');
+
 car.classList.add('car');
 
 start.addEventListener('click',startGame);
@@ -18,7 +20,8 @@ const setting = {
     start:false,
     score: 0,
     speed: 3,
-    traffic: 3
+    traffic: 3,
+    hiscore: 0
 }
 function getQuantityElements(heightElement){
     return document.documentElement.clientHeight / heightElement +1;
@@ -63,8 +66,12 @@ function startGame(){
 function playGame(){
     
     if(setting.start){
+        if(setting.score >= setting.hiscore ){
+            setting.hiscore = setting.score;
+        }
         setting.score += setting.speed;
-        score.innerHTML = 'ОЧКИ<br> ' +setting.score;
+        score.innerHTML = 'Текущий заезд<br> ' +setting.score;
+        hiscore.innerHTML = 'Лучший заезд<br> ' + setting.hiscore;
         moveRoad();
         moveEnemy();
         if(keys.ArrowLeft && setting.x>0 ){

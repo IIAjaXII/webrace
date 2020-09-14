@@ -77,6 +77,7 @@ table {
 }
 .start{
     position: absolute;
+    height: 30px;
     left: 0;
     top: 0;
     width: 100%;
@@ -91,16 +92,25 @@ table {
     font-family: sans-serif;
     font-weight: 700;
 }
-.score{
+.score , .hiscore{
 position: absolute;
+height: 30px;
 top: 0;
 left: 0;
-width: 100%;
-background: black;
+width: 50%;
+background:black;
 padding: 2rem 0;
 z-index: 200;
 color: cornflowerblue;
 text-align: center;
 font-family: sans-serif;
 font-weight: 500;
+}
+
+.hiscore{
+    height: 30px;
+    left: 50%;
+    width: 50%;
+    background:grey;
+    color: rebeccapurple;
 }
