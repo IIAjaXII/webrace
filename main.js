@@ -52,6 +52,7 @@ function startGame(){
         gameArea.appendChild(enemy);
     }
     setting.score = 0;
+    setting.speed =3;
     setting.start = true;
     gameArea.appendChild(car);
     car.style.left = gameArea.offsetWidth/2 - car.offsetWidth/2;
@@ -79,16 +80,16 @@ function playGame(){
         moveRoad();
         moveEnemy();
         if(keys.ArrowLeft && setting.x>0 ){
-            setting.x -= setting.speed;
+            setting.x -= 10;
         }
         if(keys.ArrowRight && setting.x<(gameArea.offsetWidth-50) ){
-            setting.x += setting.speed;
+            setting.x += 10;
         }
         if(keys.ArrowDown && setting.y<(gameArea.offsetHeight-car.offsetHeight)){
-            setting.y += setting.speed;
+            setting.y += 10;
         }
         if(keys.ArrowUp && setting.y>0){
-            setting.y -= setting.speed;
+            setting.y -= 10;
         }
 
         car.style.left = setting.x + 'px';
