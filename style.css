@@ -129,7 +129,7 @@ body{
 .left{
     position: absolute;
     left:10;
-    bottom: 10;
+    bottom: 30%;
     width: 100px;
     height: 100px;
     background: #cb7dcb;
@@ -137,7 +137,7 @@ body{
 .right{
     position: absolute;
     right: 10;
-    bottom: 10;
+    bottom: 30%;
     width: 100px;
     height: 100px;
     background: #cb7dcb;
